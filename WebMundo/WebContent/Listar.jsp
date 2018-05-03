@@ -13,14 +13,14 @@
 <body style="background-image:url('backgroundmundo.jpg')">
 <c:import url="Menu.jsp"/>
 
-<form action="ManterPais.do" method="get">
+<form action="controller.do" method="get">
 
 <br>
 <h2 style= "color:white" align= "center">Para listar todos os países cadastrados, clique no botão abaixo</h2>
 <br>
 
 <p align= "center">
-<button type="submit" align= "center" name="acao" value= "listar" class="btn btn-outline-light" >Listar países</button>
+<button type="submit" align= "center" name="command" value= "Listar" class="btn btn-outline-light" >Listar países</button>
 <br>
 <br>
 <br>
@@ -28,7 +28,7 @@
 
 <p align= "center">
 <input type="text" placeholder="Digite aqui o continente" name="continente">
-<button type="submit" align= "center" name="acao" value= "listarCont" class="btn btn-outline-light" >Listar países</button>
+<button type="submit" align= "center" name="command" value= "ListarContinente" class="btn btn-outline-light" >Listar países</button>
 </p>
 
 </form>

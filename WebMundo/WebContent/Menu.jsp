@@ -31,9 +31,9 @@
       </li>
       
 	</ul>
-    <form class="form-inline my-2 my-lg-0" action="ManterPais.do" method="get">
+    <form class="form-inline my-2 my-lg-0" action="controller.do" method="get">
       <input class="form-control mr-sm-2" type="search" placeholder="Digite aqui o nome do país" name="nome" aria-label="Search">
-      <button class="btn btn-outline-light" align= "right" name="acao" value="buscar" type="submit">Buscar</button>
+      <button class="btn btn-outline-light" align= "right" name="command" value="Buscar" type="submit">Buscar</button>
     </form>
   </div>
 </nav>

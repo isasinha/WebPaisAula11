@@ -13,7 +13,7 @@
 <body style="background-image:url('backgroundmundo.jpg')">
 <c:import url="Menu.jsp"/>
 
-<form action="ManterPais.do" method="get">
+<form action="controller.do" method="get">
 <br>
     <fieldset>
         <legend style="color:white">Formulário de alteção</legend>
@@ -45,7 +45,7 @@
 			<br>
 		</p>
 	</fieldset>
-	<button type="submit" align= "center" name="acao" value= "alterar" class="btn btn-outline-light" >ALTERAR</button>
+	<button type="submit" align= "center" name="command" value= "Alterar" class="btn btn-outline-light" >ALTERAR</button>
 	</p>
 
 </form>

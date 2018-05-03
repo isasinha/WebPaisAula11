@@ -13,7 +13,7 @@
 <body style="background-image:url('backgroundmundo.jpg')">
 <c:import url="Menu.jsp"/>
 
-<form action="ManterPais.do" method="get">
+<form action="controller.do" method="get">
 <br>
     <fieldset>
 		<br>
@@ -26,7 +26,7 @@
 		</p>
 	</fieldset>
 	<br>
-	<button type="submit" align= "center" name="acao" value= "excluir" class="btn btn-outline-light" >EXCLUIR</button>
+	<button type="submit" align= "center" name="command" value= "Excluir" class="btn btn-outline-light" >EXCLUIR</button>
 	</p>
 
 </form>

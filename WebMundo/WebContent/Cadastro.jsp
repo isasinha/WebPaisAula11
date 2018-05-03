@@ -13,7 +13,7 @@
 <body style="background-image:url('backgroundmundo.jpg')">
 <c:import url="Menu.jsp"/>
 
-<form action="ManterPais.do" method="get">
+<form action="controller.do" method="get">
 <br>
     <fieldset>
         <legend style="color:white">Formulário</legend>
@@ -34,7 +34,7 @@
 		</p>
 	</fieldset>
 	<br>
-	<button type="submit" name="acao" value="cadastrar" class="btn btn-outline-light">Enviar dados</button>
+	<button type="submit" name="command" value="Cadastrar" class="btn btn-outline-light">Enviar dados</button>
 </form>
 <br>
 
