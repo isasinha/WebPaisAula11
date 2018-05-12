@@ -1,7 +1,5 @@
 package model;
 
-import model.Pais;
-
 public class Pais {
 
 	int id;
