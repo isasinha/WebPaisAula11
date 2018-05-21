@@ -1,6 +1,8 @@
 package model;
 
-public class Pais {
+import java.io.Serializable;
+
+public class Pais implements Serializable{
 
 	int id;
 	String nome;
