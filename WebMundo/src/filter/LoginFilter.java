@@ -1,6 +1,8 @@
 package filter;
 
 import java.io.IOException;
+
+import javax.security.auth.DestroyFailedException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -11,12 +13,11 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 import model.Usuario;
 
 @WebFilter("/controller.do")
 public class LoginFilter implements Filter {
-	public void destroy() {
-	}
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
@@ -37,7 +38,7 @@ public class LoginFilter implements Filter {
 			comando = "";
 		}
 		
-		if (logado == null && !uri.equals(path + "/Login.jsp") && !comando.equals("FazerLogin")) {
+		if ((logado == null && !uri.equals(path + "/Login.jsp") && !comando.equals("FazerLogin")) && (logado == null && !uri.equals(path + "/CadastroUsuario.jsp") && !comando.equals("CadastrarUsuario"))) {
 			((HttpServletResponse) response).sendRedirect(path + "/Login.jsp");
 		
 		} else {
@@ -49,6 +50,12 @@ public class LoginFilter implements Filter {
 	}
 
 	public void init(FilterConfig fConfig) throws ServletException {
+	
+	}
+	
+	public void destroy() {
+	
+		
 	
 	}
 

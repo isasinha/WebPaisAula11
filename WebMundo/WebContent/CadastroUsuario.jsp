@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Formulário Países</title>
+<title>Cadastro de Usuário</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">  
 </head>
@@ -15,22 +15,21 @@
 
 <form action="controller.do" method="get">
 <br>
-	   <fieldset>
+    <fieldset>
+        <legend style="color:white">Formulário</legend>
 		<br>
-		<p style="color:white">Digite sua identificação abaixo para acessar o site:
-		<br>
-		<br>
-	        Usuário: <input type="text" name="username">
+		<p style="color:white">
+
+	        Login: <input type="text" name="login">
 	        <br>
 	        <br>
-	        Senha:  <input type="text" name="password">
+	        Senha: <input type="text" name="senha">
 	        <br>
 	        <br>
 		</p>
 	</fieldset>
-	<button type="submit" align= "center" name="command" value= "FazerLogin" class="btn btn-outline-light" >LOGIN</button>
-	</p>
-
+	<br>
+	<button type="submit" name="command" value="CadastrarUsuario" class="btn btn-outline-light">Cadastrar Usuário</button>
 </form>
 <br>
 

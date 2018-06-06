@@ -11,4 +11,9 @@ public class UsuarioService {
 
 	}
 
+	public void criar(Usuario usuario) {
+		UsuarioDAO dao = new UsuarioDAO();
+		dao.criar(usuario);
+	}
+	
 }

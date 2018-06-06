@@ -35,4 +35,19 @@ public class UsuarioDAO {
 		return false;
 	}
 
+	public void criar(Usuario usuario) {
+		String sqlInsert = "INSERT INTO usuario(username, password) VALUES (?, ?)";
+		// usando o try with resources do Java 7, que fecha o que abriu
+		try (Connection conn = PaisConnectionFactory.conectar();
+				PreparedStatement stm = conn.prepareStatement(sqlInsert);) {
+			stm.setString(1, usuario.getUsername());
+			stm.setString(2, usuario.getPassword());
+			stm.execute();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
 }

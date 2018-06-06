@@ -34,8 +34,18 @@
 			method="get">
 			<ul class="navbar-nav mr-auto">
 				</li>
-				<li class="nav-item"><a class="nav-link" href="Login.jsp">Login</a>
-				</li>
+				<li class="nav-item"><a class="nav-link"
+					href="CadastroUsuario.jsp">Cadastre-se!</a></li>
+				<c:choose>
+					<c:when test="${mensagem eq 'Sim' }">
+						<li class="nav-item"><a class="nav-link" name="command"
+							value="Logout" href="Index.jsp">Logout</a></li>
+					</c:when>
+					<c:otherwise>
+						<li class="nav-item"><a class="nav-link" href="Login.jsp">Login</a>
+						</li>
+					</c:otherwise>
+				</c:choose>
 			</ul>
 			<input class="form-control mr-sm-2" type="search"
 				placeholder="Digite aqui o nome do país" name="nome"
@@ -45,7 +55,3 @@
 		</form>
 	</div>
 	</nav>
-
-
-</body>
-</html>
